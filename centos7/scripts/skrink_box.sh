@@ -23,7 +23,6 @@ echo "Zeroed swap space" &&
 /sbin/mkswap -U "$swapuuid" "$swappart"
 
 # Skrink root partition and persist disks
-
 dd if=/dev/zero of=/whitespace bs=1M ||
 echo "Zeroed disk" &&
 rm -vf /whitespace &&

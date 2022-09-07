@@ -47,7 +47,8 @@ build {
     execute_command = "{{ .Vars }} sudo -E bash '{{ .Path }}'"
     scripts         = [
       "scripts/configure_vagrant_public_key.sh",
-      "scripts/cleanup.sh"
+      "scripts/cleanup.sh",
+      "scripts/skrink_box.sh"
     ]
   }
 

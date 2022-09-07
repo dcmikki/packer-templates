@@ -52,7 +52,8 @@ build {
       "scripts/install_epel-release.sh", 
       "scripts/configure_vagrant_public_key.sh",
       "scripts/install_guest_additions.sh",
-      "scripts/cleanup.sh"
+      "scripts/cleanup.sh",
+      "scripts/skrink_box.sh"
     ]
   }
 
