@@ -12,3 +12,6 @@ iso/
 
 # qemu format disk image*.
 *.qcow2
+
+# outputs directories
+output*/
