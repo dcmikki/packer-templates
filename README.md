@@ -4,6 +4,8 @@
 Install packer from Hashicorp
 * https://learn.hashicorp.com/tutorials/packer/get-started-install-cli?in=packer/docker-get-started
 
+Install KVM / libvirt on Linux
+* https://github.com/dcmikki/vagrant_automation/blob/main/README.md
 
 #### Check version
 ```
