@@ -1,0 +1,58 @@
+{
+  "builders": [
+    {
+      "boot_command": [
+        "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter><wait>"
+      ],
+      "boot_wait": "20s",
+      "guest_os_type": "RedHat_64",
+      "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
+      "headless": true,
+      "http_directory": "http",
+      "iso_checksum": "file:http://mirror.de.leaseweb.net/centos/7/isos/x86_64/sha256sum.txt",
+      "iso_urls": [
+        "iso/CentOS-7-x86_64-Minimal-{{ user `version` }}.iso",
+        "http://mirror.de.leaseweb.net/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-{{ user `version` }}.iso"
+      ],
+      "output_directory": "output-centos",
+      "post_shutdown_delay": "15s",
+      "shutdown_command": "echo '{{ user `password` }}' | sudo -S /sbin/halt -h -p",
+      "ssh_password": "{{ user `password` }}",
+      "ssh_port": 22,
+      "ssh_timeout": "20m",
+      "ssh_username": "{{ user `username` }}",
+      "type": "virtualbox-iso",
+      "vboxmanage": [
+        [ "modifyvm", "{{.Name}}", "--memory", "2048" ],
+        [ "modifyvm", "{{.Name}}", "--cpus", "2" ]
+      ],
+      "virtualbox_version_file": ".vbox_version",
+      "vm_name": "{{ user `vm_name` }}.box"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "execute_command": "{{.Vars}} sudo -E bash '{{.Path}}'",
+      "scripts": [
+        "scripts/install_epel-release.sh",
+        "scripts/configure_vagrant_public_key.sh",
+        "scripts/install_guest_additions.sh"
+      ]
+    }
+  ],
+  "post-processors": [
+    {
+      "type": "vagrant",
+      "compression_level": 9,
+      "keep_input_artifact": false,
+      "output": "box/{{.Provider}}/{{user `vm_name`}}.{{user `version`}}.box"
+    }
+  ],
+  "variables": {
+    "username": "vagrant",
+    "password": "vagrant",
+    "version": "2009",
+    "vm_name": "centos7.9"
+  }
+}
