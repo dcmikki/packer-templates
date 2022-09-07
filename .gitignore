@@ -9,3 +9,6 @@ crash.log
 
 # Iso images
 iso/
+
+# qemu format disk image*.
+*.qcow2
