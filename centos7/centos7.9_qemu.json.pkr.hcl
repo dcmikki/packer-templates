@@ -54,6 +54,6 @@ build {
   post-processor "vagrant" {
     keep_input_artifact = false
     compression_level   = 9
-    output              = "box/<no value>/${var.vm_name}.${var.version}.box"
+    output              = "box/{{ .Provider }}/${var.vm_name}.${var.version}.box"
   }
 }
