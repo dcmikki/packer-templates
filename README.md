@@ -88,7 +88,7 @@ $ vagrant-metadata \
 {
   "name": "diego/centos7",
   "description": "Diego's CentOS 7 packer boxes",
-  "baseurl": "http://local.nfs.home/vagrant/",
+  "baseurl": "http://local.nfs.home/vagrant/boxes",
   "versions": [
     {
       "version": "1.0.0",
@@ -97,13 +97,13 @@ $ vagrant-metadata \
           "name": "libvirt",
           "checksum_type": "sha1",
           "checksum": "b8f8a1308a626edb72514e232a379a041d62dd65",
-          "url": "/home/diego/CODE/BOXES/centos7/1.0.0/libvirt/centos7.9.2009.box"
+          "url": "http://local.nfs.home/vagrant/boxes/centos7/1.0.0/libvirt/centos7.9.2009.box"
         },
         {
           "name": "virtualbox",
           "checksum_type": "sha1",
           "checksum": "ada5dcec9a55db52ff6ccea49b56fd73cfcdac0a",
-          "url": "/home/diego/CODE/BOXES/centos7/1.0.0/virtualbox/centos7.9.2009.box"
+          "url": "http://local.nfs.home/vagrant/boxes/centos7/1.0.0/virtualbox/centos7.9.2009.box"
         }
       ]
     }
