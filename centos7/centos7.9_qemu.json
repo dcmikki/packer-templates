@@ -28,7 +28,10 @@
     {
       "type": "shell",
       "execute_command": "{{.Vars}} sudo -E bash '{{.Path}}'",
-      "script": "scripts/configure_vagrant_public_key.sh"
+      "scripts": [
+        "scripts/configure_vagrant_public_key.sh",
+        "scripts/cleanup.sh"
+      ]
     }
   ],
   "post-processors": [
