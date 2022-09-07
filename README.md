@@ -21,6 +21,13 @@ The configuration is valid.
 
 ```
 
+#### Format template with extension pkr.hcl
+
+```
+packer fmt centos7.9_qemu.json.
+```
+
+
 #### Build box
 ```
 packer build centos7.9_qemu.json
