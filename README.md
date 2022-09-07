@@ -79,12 +79,15 @@ $ cd centos7
 
 $ vagrant-metadata \
 	--name="diego/centos7" \
-	--baseurl="/home/diego/CODE/BOXES/centos7" \
+	--baseurl="http://local.nfs.home/vagrant/boxes" \
 	--description="Diego's CentOS 7 packer boxes"
 ```
 
+and see  `metadata.json` generated:
 
 ```
+$ cat metadata.json
+
 {
   "name": "diego/centos7",
   "description": "Diego's CentOS 7 packer boxes",
