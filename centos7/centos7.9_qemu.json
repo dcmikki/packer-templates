@@ -33,9 +33,10 @@
   ],
   "post-processors": [
     {
+      "type": "vagrant",
+      "compression_level": 9,
       "keep_input_artifact": false,
-      "output": "box/{{.Provider}}/{{user `vm_name`}}-{{user `version`}}.box",
-      "type": "vagrant"
+      "output": "box/{{.Provider}}/{{user `vm_name`}}-{{user `version`}}.box"
     }
   ],
   "variables": {
@@ -45,4 +46,3 @@
     "vm_name": "centos7-packer"
   }
 }
-
