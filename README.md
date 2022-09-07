@@ -54,5 +54,31 @@ $ tree
     │	└── virtualbox
     │		└── centos7.9.2009.box
     └── metadata.json
+```
 
+#### Get python package info
+
+```
+$ vagrant-metadata -h
+usage: vagrant-metadata [-h] [-d DESCRIPTION] [-f] [-n NAME] [-u BASEURL] [-a]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -d DESCRIPTION, --description DESCRIPTION
+  -f, --force
+  -n NAME, --name NAME
+  -u BASEURL, --baseurl BASEURL
+  -a, --append
+
+```
+
+#### Generate `metadata.json` first time:
+
+```
+$ cd centos7
+
+$ vagrant-metadata 	\
+	--name diego/centos7 \
+	--baseurl /home/diego/CODE/BOXES/centos7 \
+	--description "Diego's CentOS 7 packer boxes
 ```
