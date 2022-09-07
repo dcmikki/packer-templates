@@ -28,7 +28,10 @@ source "virtualbox-iso" "centos7" {
   http_directory          = "http"
   iso_checksum            = "file:http://mirror.de.leaseweb.net/centos/7/isos/x86_64/sha256sum.txt"
   iso_target_path         = "iso"
-  iso_urls                = ["iso/CentOS-7-x86_64-Minimal-${var.version}.iso", "http://mirror.de.leaseweb.net/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-${var.version}.iso"]
+  iso_urls                = [
+    "iso/CentOS-7-x86_64-Minimal-${var.version}.iso",
+    "http://mirror.de.leaseweb.net/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-${var.version}.iso"
+  ]
   output_directory        = "output-centos"
   post_shutdown_delay     = "15s"
   shutdown_command        = "echo '${var.password}' | sudo -S /sbin/halt -h -p"
