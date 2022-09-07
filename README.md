@@ -77,7 +77,7 @@ optional arguments:
 ```
 $ cd centos7
 
-$ vagrant-metadata 	\
+$ vagrant-metadata \
 	--name diego/centos7 \
 	--baseurl /home/diego/CODE/BOXES/centos7 \
 	--description "Diego's CentOS 7 packer boxes
