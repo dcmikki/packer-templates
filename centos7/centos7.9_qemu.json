@@ -36,13 +36,13 @@
       "type": "vagrant",
       "compression_level": 9,
       "keep_input_artifact": false,
-      "output": "box/{{.Provider}}/{{user `vm_name`}}-{{user `version`}}.box"
+      "output": "box/{{.Provider}}/{{user `vm_name`}}.{{user `version`}}.box"
     }
   ],
   "variables": {
     "username": "vagrant",
     "password": "vagrant",
     "version": "2009",
-    "vm_name": "centos7-packer"
+    "vm_name": "centos7.9"
   }
 }
