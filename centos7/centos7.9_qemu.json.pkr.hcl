@@ -31,7 +31,7 @@ source "qemu" "centos7" {
     "iso/CentOS-7-x86_64-Minimal-${var.version}.iso",
     "http://mirror.de.leaseweb.net/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-${var.version}.iso"
     ]
-  memory           = "4096"
+  memory           = 2048
   output_directory = "output-centos"
   shutdown_command = "echo '${var.password}' | sudo -S /sbin/halt -h -p"
   ssh_password     = "${var.password}"

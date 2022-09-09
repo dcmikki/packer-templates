@@ -14,7 +14,7 @@
         "iso/CentOS-7-x86_64-Minimal-{{ user `version` }}.iso",
         "http://mirror.de.leaseweb.net/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-{{ user `version` }}.iso"
       ],
-      "memory": "2048",
+      "memory": 2048,
       "output_directory": "output-centos",
       "shutdown_command": "echo '{{ user `password` }}' | sudo -S /sbin/halt -h -p",
       "ssh_password": "{{ user `password` }}",
