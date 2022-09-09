@@ -35,7 +35,6 @@ packer fmt centos7.9_qemu.json.pkr.hc
 packer build centos7.9_qemu.json
 ```
 
-
 ## Vagrant Boxes Metadata
 
 Create and updat3 Vagrant boxes metadata files `metadata.json` using a python package
@@ -114,4 +113,15 @@ $ cat metadata.json
     }
   ]
 }
+```
+
+#### How to use this box with Vagrant
+
+Minimal installation in the `Vagrantfile`
+
+```
+Vagrant.configure("2") do |config|
+  config.vm.box = "diego/centos7"
+  config.vm.box_url = "http://local.nfs.home/vagrant/boxes/centos7/metadata.json"
+end
 ```
