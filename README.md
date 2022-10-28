@@ -33,6 +33,8 @@ packer fmt centos7.9_qemu.json.pkr.hc
 #### Build box
 ```
 packer build centos7.9_qemu.json
+packer build centos7.9_virtualbox.json
+packer build centos7.9_vmware.json
 ```
 
 ## Vagrant Boxes Metadata
